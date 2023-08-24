@@ -1,0 +1,43 @@
+:root {
+  --primary-color: #571429;
+  --secondary-color: #fdfbf8;
+  --tertiary-color: #d18d3d;
+  --accent-color: #dc356d;
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.secondary {
+  color: var(--secondary-color);
+}
+
+.tertiary {
+  color: var(--tertiary-color);
+}
+
+.accent {
+  color: var(--accent-color);
+}
+
+.primary-bg {
+  background-color: var(--primary-color);
+}
+
+.secondary-bg {
+  background-color: var(--secondary-color);
+}
+
+.tertiary-bg {
+  background-color: var(--tertiary-color);
+}
+
+.accent-bg {
+  background-color: var(--accent-color);
+}
+
+.profile-picture {
+  max-width: 60px !important;
+  max-height: 60px !important;
+}

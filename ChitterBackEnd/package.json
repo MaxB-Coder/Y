@@ -1,0 +1,30 @@
+{
+  "name": "chitterbackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "nodemon index.js",
+    "start": "NODE_ENV=dev nodemon index.js",
+    "start-win": "SET NODE_ENV=dev&&nodemon index.js",
+    "test": "NODE_ENV=test mocha --timeout=10000 --exit",
+    "coverage": "NODE_ENV=test mocha c8 npm test"
+  },
+  "author": "Max Blaschek",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "chai": "^4.3.7",
+    "chai-http": "^4.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "mocha": "^10.2.0",
+    "mongoose": "^7.4.2"
+  },
+  "devDependencies": {
+    "c8": "^8.0.1"
+  }
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "_id": {
+      "$oid": "64d7fcfcfc13ae5761089f7b"
+    },
+    "name": "Gweneth Muff",
+    "email": "gmuff0@google.co.uk",
+    "username": "gmuff0",
+    "password": "$2a$04$aWmp9NQB87hA9i5zO2riSu08orafPZPPtfv0xP47p8gPI0ecL5n4."
+  },
+  {
+    "_id": {
+      "$oid": "64d7fcfcfc13ae5761089f7c"
+    },
+    "name": "Carlita Train",
+    "email": "ctrain1@sciencedaily.com",
+    "username": "ctrain1",
+    "password": "$2a$04$i2YcRhmQN1AJjzrHz1SP8eRO40Iex8isDzYFWR0aVsdrD7rkjUwzS"
+  },
+  {
+    "_id": {
+      "$oid": "64d7fcfcfc13ae5761089f7d"
+    },
+    "name": "Janina Mease",
+    "email": "jmease2@noaa.gov",
+    "username": "jmease2",
+    "password": "$2a$04$8tfAdZOUcx7V9jxxJ8XqVenZwbWSrkoCoL4JrcRv3hsZwQXf7ULj2"
+  },
+  {
+    "_id": {
+      "$oid": "64d7fcfcfc13ae5761089f7e"
+    },
+    "name": "Dorine Beacham",
+    "email": "dbeacham3@tumblr.com",
+    "username": "dbeacham3",
+    "password": "$2a$04$BM2vD0M.aGGE8X0X2Gjlt.sYFMX7W3QzClHFU3zO1sYayJEJvC8Va"
+  },
+  {
+    "_id": {
+      "$oid": "64d7fcfcfc13ae5761089f7f"
+    },
+    "name": "Orin Mailes",
+    "email": "omailes4@cmu.edu",
+    "username": "omailes4",
+    "password": "$2a$04$U1dpuVNXusuAR8SxR.q6Oeyx.NNuPv8zD5WypDukOWC9tEHhcpMaK"
+  },
+  {
+    "_id": {
+      "$oid": "64d7fcfcfc13ae5761089f80"
+    },
+    "name": "Marcelia Haking",
+    "email": "mhaking5@wikispaces.com",
+    "username": "mhaking5",
+    "password": "$2a$04$YtJsIgLTU/JDyJeqGT7L5eFkoOk/ASmVk4fKq5pjDKODQONoMdXN6"
+  },
+  {
+    "_id": {
+      "$oid": "64d7fcfcfc13ae5761089f81"
+    },
+    "name": "Zara Lownds",
+    "email": "zlownds6@irs.gov",
+    "username": "zlownds6",
+    "password": "$2a$04$EXoiKMeiACKfuT9629lsVuXGBLukCroHPH3C8xq8UXuZTFJaNkQWK"
+  },
+  {
+    "_id": {
+      "$oid": "64d7fcfcfc13ae5761089f82"
+    },
+    "name": "Claire Amthor",
+    "email": "camthor7@ucoz.ru",
+    "username": "camthor7",
+    "password": "$2a$04$Xhgz5O2F3J3rZL9wKaJeDO1HLyry5sh48mObsgyZuZxZHZzWm1iKi"
+  },
+  {
+    "_id": {
+      "$oid": "64d7fcfcfc13ae5761089f83"
+    },
+    "name": "Horton Turfs",
+    "email": "hturfs8@house.gov",
+    "username": "hturfs8",
+    "password": "$2a$04$GytsfeS7j5aE49c/YX41aueWV1Pk6QPevf2GvSBOhs9Rl6tYgsxw."
+  },
+  {
+    "_id": {
+      "$oid": "64d7fcfcfc13ae5761089f84"
+    },
+    "name": "Marie-jeanne Ballin",
+    "email": "mballin9@soup.io",
+    "username": "mballin9",
+    "password": "$2a$04$FclqTYFkhmaCD.QH3V5sA.9Bst4kX3Mex9Rq93GZjdp0z5q/cu4Sa"
+  }
+]
