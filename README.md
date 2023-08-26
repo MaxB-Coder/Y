@@ -84,10 +84,6 @@ Visit `http://localhost:3010` in your browser to access Y!
 - ExpressValidator
 - MongoDB
 
-## N-Tier Diagram
-
-![N-Tier Diagram](Documentation/N-tier-diagram.png)
-
 ## API Endpoints
 
 - `POST /sign-up`: Endpoint to register a new user.
