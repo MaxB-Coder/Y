@@ -8,7 +8,7 @@ This project was my final challenge during the [Digital Futures Academy](https:/
 - **Login**: Registered users can log in to access their timeline and peep (tweet).
 - **Post Peeps**: Once logged in, users can share their thoughts in peep format.
 
-## Mock Ups
+## Screenshots
 
 ![mock sign-up](Documentation/MockUps/sign-up.png)
 ![mock login](Documentation/MockUps/login.png)
