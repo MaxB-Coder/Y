@@ -1,4 +1,4 @@
-![Y](./documentation/Y.png)
+![Y](./Documentation/Y.png)
 
 ## A simple clone of Twitter/X that allows users to sign up, log in, and post tweets.
 
