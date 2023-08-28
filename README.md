@@ -1,4 +1,4 @@
-![Y](./Documentation/Y.png)
+![Y](./documentation/Y.png)
 
 ## A simple clone of Twitter/X that allows users to sign up, log in, and post tweets.
 
@@ -10,9 +10,8 @@ This project was my final challenge during the [Digital Futures Academy](https:/
 
 ## Screenshots
 
-![mock sign-up](Documentation/MockUps/sign-up.png)
-![mock login](Documentation/MockUps/login.png)
-![mock timeline](Documentation/MockUps/timeline.png)
+![Sign Up](./Documentation/Screenshots/signUp.png)
+![Login](./Documentation/Screenshots/login.png)
 
 ## Installation and Setup
 
