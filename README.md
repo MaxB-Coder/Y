@@ -12,6 +12,8 @@ This project was my final challenge during the [Digital Futures Academy](https:/
 
 ![Sign Up](./Documentation/Screenshots/signUp.png)
 ![Login](./Documentation/Screenshots/login.png)
+![Peep Page](./Documentation/Screenshots/peepPage.png)
+![Post Peep](./Documentation/Screenshots/postPeep.png)
 
 ## Installation and Setup
 
