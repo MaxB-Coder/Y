@@ -24,7 +24,7 @@ function PostPeeps() {
       values.username = auth.username;
       values.$date = new Date();
       const postPeepResponse = await postPeep(values);
-      
+
       window.location.reload(true);
     },
   });
