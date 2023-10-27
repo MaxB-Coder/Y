@@ -1,5 +1,8 @@
+import { configDotenv } from "dotenv";
+
 import { postLoginService } from "../services/login.service.js";
 import { validationResult } from "express-validator";
+import jwt from "jsonwebtoken";
 
 export const postLogin = async (req, res) => {
   const results = validationResult(req);
@@ -8,7 +11,11 @@ export const postLogin = async (req, res) => {
   }
   try {
     const user = await postLoginService(req.body);
-    res.status(200).json({ user });
+    const accessToken = jwt.sign(
+      JSON.stringify(user),
+      process.env.ACCESS_TOKEN_SECRET
+    );
+    res.status(200).json({ accessToken: accessToken });
   } catch (error) {
     console.log(error);
     res.status(400).send(`login failed`);

@@ -1,0 +1,37 @@
+// Sign-Up
+POST http://localhost:3010/sign-up 
+Content-Type: application/json
+
+{
+    "name": "Test Name",
+    "username": "TestUsername",
+    "email": "Test@testEmail.com",
+    "password": "TestPassword123!"
+}
+
+###
+
+// Login
+POST http://localhost:3010/login
+Content-Type: application/json
+
+{
+    "email": "Test@testEmail.com",
+    "password": "TestPassword123!"
+}
+
+###
+
+// Peeps
+GET http://localhost:3010/
+
+###
+
+POST http://localhost:3010/
+Content-Type: application/json
+
+{
+    "username": "TestUsername",
+    "$date": "2023-08-28T21:06:22.746Z",
+    "message": "THIS IS A TEST MESSAGE"
+}

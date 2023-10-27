@@ -15,6 +15,7 @@ export const postPeep = async (req, res) => {
     const postPeep = await postPeepService(req.body);
     res.status().json(postPeep);
   } catch (e) {
+    console.log(e);
     res.status(500).json({ error: "Internal server error" });
   }
 };
