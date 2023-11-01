@@ -2,6 +2,7 @@ import express from "express";
 
 import { getPeeps } from "../controllers/peeps.controller.js";
 import { postPeep } from "../controllers/peeps.controller.js";
+import { authenticateToken } from "../../authServer.js";
 
 const router = express.Router();
 
