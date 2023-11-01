@@ -47,7 +47,7 @@ function Login() {
           password: values.password,
         });
         // Add a user check on each page (useEffect) will set the login state.
-        localStorage.setItem("user", username);
+        // localStorage.setItem("user", username);
         navigate("/");
       } else {
         alert("Incorrect email or password, or the account does not exist.");
