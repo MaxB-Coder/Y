@@ -23,7 +23,8 @@
     "express-validator": "^7.0.1",
     "jsonwebtoken": "^9.0.2",
     "mocha": "^10.2.0",
-    "mongoose": "^7.4.2"
+    "mongoose": "^7.4.2",
+    "nodemon": "^3.0.2"
   },
   "devDependencies": {
     "c8": "^8.0.1"
