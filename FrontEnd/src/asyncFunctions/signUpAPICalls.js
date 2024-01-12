@@ -1,9 +1,9 @@
-import axios from "axios";
+import axios from 'axios';
 
 export const checkSignUp = async ({ name, username, email, password }) => {
   try {
     const signUpReturn = await axios.post(
-      import.meta.env.VITE_PEEPSURL + "/sign-up",
+      import.meta.env.VITE_PEEPSURL + '/sign-up',
       {
         name: name,
         username: username,

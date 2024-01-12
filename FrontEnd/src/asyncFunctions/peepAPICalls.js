@@ -1,11 +1,11 @@
-import axios from "axios";
+import axios from 'axios';
 
 export const getPeeps = async () => {
   try {
     const response = await axios.get(import.meta.env.VITE_PEEPSURL);
     if (Array.isArray(response.data) && response.data?.length > 0)
       return { peeps: response.data, status: response.status };
-    throw new Error("There are no peeps");
+    throw new Error('There are no peeps');
   } catch (e) {
     return {
       peeps: [],
