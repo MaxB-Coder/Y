@@ -18,6 +18,9 @@ const PORT = process.env.PORT;
 const HOST = process.env.HOST;
 const app = express();
 
+// Treat `$`-prefixed keys in query filters as values, not operators (NoSQL injection)
+mongoose.set('sanitizeFilter', true);
+
 main().catch((err) => console.log(err));
 
 app.use(express.json());
