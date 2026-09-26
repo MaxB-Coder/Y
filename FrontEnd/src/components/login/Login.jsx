@@ -39,12 +39,11 @@ function Login() {
 
     onSubmit: async (values) => {
       const processLogin = await checkLogin(values);
-      if (processLogin.login.user.length !== 0) {
+      if (processLogin.login?.user?.length) {
         const username = processLogin.login.user[0].username;
         setAuth({
           email: values.email,
           username: username,
-          password: values.password,
         });
         // Add a user check on each page (useEffect) will set the login state.
         // localStorage.setItem("user", username);
