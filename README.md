@@ -45,7 +45,15 @@ This project was my final challenge during the [Digital Futures Academy](https:/
     npm install
    ```
 
-5. **Run the Backend Server**:
+5. **Configure the Back End**:
+
+   ```bash
+    cp .env.dev.example .env.dev
+   ```
+
+   Set `DBURI` in `.env.dev` to your local MongoDB or your own MongoDB Atlas connection string. `.env.dev` is git-ignored.
+
+6. **Run the Backend Server**:
 
    ```bash
     npm start
