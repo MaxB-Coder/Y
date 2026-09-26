@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import Header from "../Header.jsx";
 import { checkSignUp } from "../../asyncFunctions/signUpAPICalls.js";
@@ -174,12 +174,12 @@ function SignUp() {
               </button>
               <p className="text-sm font-light">
                 Already have an account?{" "}
-                <a
-                  href="/login"
+                <Link
+                  to="/login"
                   className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                 >
                   Login here
-                </a>
+                </Link>
               </p>
             </form>
           </div>
