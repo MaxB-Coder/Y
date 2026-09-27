@@ -1,13 +1,11 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
 
 import { postPeep } from "../../asyncFunctions/peepAPICalls";
 import useAuth from "../../hooks/useAuth.js";
 
-function PostPeeps() {
+function PostPeeps({ onPosted }) {
   const { auth } = useAuth();
-  const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues: {
@@ -20,12 +18,15 @@ function PostPeeps() {
       message: Yup.string().required("Message is required"),
     }),
 
-    onSubmit: async (values) => {
+    onSubmit: async (values, { resetForm }) => {
       values.username = auth.username;
       values.$date = new Date();
-      const postPeepResponse = await postPeep(values);
+      await postPeep(values);
 
-      window.location.reload(true);
+      // Refresh the timeline in place; reloading the page would log the user out
+      window.my_modal_2.close();
+      resetForm();
+      onPosted?.();
     },
   });
 

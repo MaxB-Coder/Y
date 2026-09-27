@@ -4,7 +4,7 @@ import Peep from "./Peep.jsx";
 import PeepModel from "../utils/peep.model";
 import useAuth from "../../hooks/useAuth";
 
-export const PeepPage = ({ peepData }) => {
+export const PeepPage = ({ peepData, onPosted }) => {
   const { auth } = useAuth();
   const sortedPeeps = peepData.sort(
     (a, b) => new Date(b["$date"]) - new Date(a["$date"])
@@ -30,7 +30,7 @@ export const PeepPage = ({ peepData }) => {
     <>
       <HeaderPeeps />
       <div className="pt-4">{populatePeeps()}</div>
-      {auth?.username ? <PostPeeps /> : null}
+      {auth?.username ? <PostPeeps onPosted={onPosted} /> : null}
     </>
   );
 };

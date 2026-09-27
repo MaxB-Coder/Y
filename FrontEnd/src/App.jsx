@@ -37,7 +37,7 @@ function App() {
     <>
       <div>
         <Routes>
-          <Route path="/" element={<PeepPage peepData={peepData} />} />
+          <Route path="/" element={<PeepPage peepData={peepData} onPosted={fetchData} />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
         </Routes>

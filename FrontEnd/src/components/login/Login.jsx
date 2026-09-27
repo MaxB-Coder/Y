@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { DEMO_ACCOUNT } from "../../demo/store.js";
 
 import Header from "../Header.jsx";
 import { checkLogin } from "../../asyncFunctions/loginAPICalls.js";
@@ -64,6 +65,11 @@ function Login() {
             <h1 className="text-center text-xl font-bold tracking-tight">
               Welcome back
             </h1>
+            {import.meta.env.VITE_DEMO === "true" && (
+              <p className="text-center text-sm" role="note">
+                Demo account: {DEMO_ACCOUNT.email} / {DEMO_ACCOUNT.password}
+              </p>
+            )}
             <form
               aria-label="form"
               className="space-y-4 md:space-y-6"
@@ -125,12 +131,12 @@ function Login() {
               />
               <p className="text-sm font-light">
                 Don't have an account?{" "}
-                <a
-                  href="/sign-up"
+                <Link
+                  to="/sign-up"
                   className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                 >
                   Sign up here
-                </a>
+                </Link>
               </p>
             </form>
           </div>

@@ -9,7 +9,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "build:demo": "VITE_DEMO=true VITE_PEEPSURL=\"${DEMO_BASE:-/}api\" vite build"
   },
   "dependencies": {
     "axios": "^1.4.0",
@@ -35,9 +36,15 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "jsdom": "^22.1.0",
+    "msw": "^2.15.0",
     "postcss": "^8.4.27",
     "tailwindcss": "^3.3.3",
     "vite": "^4.4.5",
     "vitest": "^0.34.1"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
