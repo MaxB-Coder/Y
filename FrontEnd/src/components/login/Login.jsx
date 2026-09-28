@@ -13,7 +13,24 @@ const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 function Login() {
   const { setAuth } = useAuth();
   const navigate = useNavigate();
-  
+
+  const logIn = async (values) => {
+    const processLogin = await checkLogin(values);
+    if (processLogin.login?.user?.length) {
+      const username = processLogin.login.user[0].username;
+      setAuth({
+        email: values.email,
+        username: username,
+      });
+      // Add a user check on each page (useEffect) will set the login state.
+      // localStorage.setItem("user", username);
+      navigate("/");
+    } else {
+      alert("Incorrect email or password, or the account does not exist.");
+      navigate("/login");
+    }
+  };
+
   useEffect(() => {
     document.title = "Login";
   }, []);
@@ -38,22 +55,7 @@ function Login() {
         ),
     }),
 
-    onSubmit: async (values) => {
-      const processLogin = await checkLogin(values);
-      if (processLogin.login?.user?.length) {
-        const username = processLogin.login.user[0].username;
-        setAuth({
-          email: values.email,
-          username: username,
-        });
-        // Add a user check on each page (useEffect) will set the login state.
-        // localStorage.setItem("user", username);
-        navigate("/");
-      } else {
-        alert("Incorrect email or password, or the account does not exist.");
-        navigate("/login");
-      }
-    },
+    onSubmit: (values) => logIn(values),
   });
 
   return (
@@ -66,9 +68,17 @@ function Login() {
               Welcome back
             </h1>
             {import.meta.env.VITE_DEMO === "true" && (
-              <p className="text-center text-sm" role="note">
-                Demo account: {DEMO_ACCOUNT.email} / {DEMO_ACCOUNT.password}
-              </p>
+              <>
+                {/* Visitors to the portfolio demo can look around without signing up */}
+                <button
+                  type="button"
+                  className="w-full tertiary-bg secondary focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                  onClick={() => logIn(DEMO_ACCOUNT)}
+                >
+                  Try the demo account
+                </button>
+                <p className="text-center text-xs">or log in with your email</p>
+              </>
             )}
             <form
               aria-label="form"
@@ -126,8 +136,8 @@ function Login() {
               </div>
               <input
                 type="submit"
-                className="w-full primary-bg focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                value="Log In"
+                className="w-full primary-bg secondary focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                value="Log in"
               />
               <p className="text-sm font-light">
                 Don't have an account?{" "}
