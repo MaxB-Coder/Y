@@ -3,8 +3,8 @@ import relativeTime from "dayjs/plugin/relativeTime";
 
 dayjs.extend(relativeTime);
 
-/** Y's own colours, so each person keeps the same avatar colour everywhere. */
-const AVATAR_COLOURS = ["#571429", "#d18d3d", "#dc356d", "#8a3b5c", "#b0623a"];
+/** Y's own colours, light enough for the dark timeline; each person keeps theirs. */
+const AVATAR_COLOURS = ["#8a3b5c", "#d18d3d", "#dc356d", "#b0623a", "#a8466b"];
 
 const avatarColour = (username = "") =>
   AVATAR_COLOURS[
@@ -20,7 +20,7 @@ const Peep = ({ peep }) => {
     <div className="mx-auto max-w-xl px-4">
       <article
         aria-labelledby={nameId}
-        className="flex gap-3 px-4 py-4 my-3 primary secondary-bg rounded-2xl shadow-md shadow-black/20"
+        className="flex gap-3 px-4 py-4 my-3 surface rounded-2xl"
       >
         <div
           aria-hidden="true"

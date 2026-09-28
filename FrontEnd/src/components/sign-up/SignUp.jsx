@@ -61,7 +61,7 @@ function SignUp() {
     <>
       <Header />
       <div className="h-screen v-screen flex flex-col items-center mt-12 px-6 mx-auto lg:py-0">
-        <div className="h-max w-full secondary-bg primary rounded-2xl shadow-xl shadow-black/30 dark:border md:mt-0 sm:max-w-md xl:p-0">
+        <div className="h-max w-full surface rounded-2xl shadow-xl shadow-black/40 md:mt-0 sm:max-w-md xl:p-0">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight md:text-2xl">
               Create an account
@@ -87,7 +87,7 @@ function SignUp() {
                   type="name"
                   name="name"
                   id="name"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="field block w-full p-2.5 rounded-xl sm:text-sm"
                   placeholder="Full name"
                   required=""
                   value={formik.values.name}
@@ -111,7 +111,7 @@ function SignUp() {
                   type="username"
                   name="username"
                   id="username"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="field block w-full p-2.5 rounded-xl sm:text-sm"
                   placeholder="Username"
                   required=""
                   value={formik.values.username}
@@ -135,7 +135,7 @@ function SignUp() {
                   type="email"
                   name="email"
                   id="email"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="field block w-full p-2.5 rounded-xl sm:text-sm"
                   placeholder="name@company.com"
                   required=""
                   value={formik.values.email}
@@ -160,7 +160,7 @@ function SignUp() {
                   name="password"
                   id="password"
                   placeholder="••••••••"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-xl focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="field block w-full p-2.5 rounded-xl sm:text-sm"
                   required=""
                   value={formik.values.password}
                   onChange={formik.handleChange}
@@ -168,15 +168,15 @@ function SignUp() {
               </div>
               <button
                 type="submit"
-                className="w-full primary-bg secondary focus:ring-4 focus:outline-none focus:ring-primary-300 font-semibold rounded-full text-sm px-5 py-2.5 text-center"
+                className="w-full accent-bg text-white focus:ring-4 focus:outline-none focus:ring-[#dc356d]/40 font-semibold rounded-full text-sm px-5 py-2.5 text-center"
               >
                 Sign Up
               </button>
-              <p className="text-sm font-light">
+              <p className="text-sm text-soft">
                 Already have an account?{" "}
                 <Link
                   to="/login"
-                  className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                  className="font-semibold accent hover:underline"
                 >
                   Log in here
                 </Link>
