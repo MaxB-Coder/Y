@@ -5,9 +5,9 @@ function HeaderPeeps() {
   const { auth, setAuth } = useAuth();
   return (
     <>
-      <header className="grid grid-cols-3 items-center gap-4 px-3 secondary">
+      <header className="sticky top-0 z-10 grid grid-cols-3 items-center gap-4 px-4 py-2 secondary bg-[#571429]/90 backdrop-blur border-b border-white/10">
         <Link className="col-start-2" to="/">
-          <h1 className="font-bold text-3xl text-center">Y</h1>
+          <h1 className="font-black text-3xl text-center">Y</h1>
         </Link>
         <nav className="flex justify-end gap-3 text-sm sm:text-base">
           {auth?.username ? (
