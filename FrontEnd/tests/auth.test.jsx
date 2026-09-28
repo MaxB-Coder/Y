@@ -62,6 +62,12 @@ describe('the login page', () => {
     expect(await screen.findByText('Timeline for demo')).toBeInTheDocument();
   });
 
+  it('is where a visitor finds signing up', () => {
+    vi.stubEnv('VITE_DEMO', 'true');
+    renderLogin();
+    expect(screen.getByRole('link', { name: 'Sign up here' })).toHaveAttribute('href', '/sign-up');
+  });
+
   it('outside the demo, has no demo account button', () => {
     vi.stubEnv('VITE_DEMO', 'false');
     renderLogin();
@@ -71,10 +77,11 @@ describe('the login page', () => {
 });
 
 describe('the timeline header', () => {
-  it('offers both logging in and signing up to a visitor', () => {
+  it('shows the Y logo, and one account button that goes to the login page', () => {
     renderHeader({});
+    expect(screen.getByRole('heading', { name: 'Y' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Log in' })).toHaveAttribute('href', '/login');
-    expect(screen.getByRole('link', { name: 'Sign up' })).toHaveAttribute('href', '/sign-up');
+    expect(screen.queryByRole('link', { name: 'Sign up' })).toBeNull();
   });
 
   it('offers logging out once logged in, which ends the session', async () => {

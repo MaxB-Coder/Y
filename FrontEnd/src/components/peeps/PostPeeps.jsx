@@ -32,23 +32,34 @@ function PostPeeps({ onPosted }) {
 
   return (
     <>
-      <footer className="fixed bottom-0 right-0">
+      <footer className="fixed bottom-0 right-0 p-4">
         <button
-          className="tertiary-bg primary w-11 h-11 rounded-full text-3xl pb-11 mb-1 mr-1"
+          aria-label="New peep"
+          className="grid place-items-center w-14 h-14 rounded-full accent-bg text-white shadow-lg shadow-[#dc356d]/30 transition-transform hover:scale-105 active:scale-95"
           onClick={() => window.my_modal_2.showModal()}
         >
-          +
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            className="w-6 h-6 stroke-current"
+            fill="none"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+          >
+            <path d="M12 5v14M5 12h14" />
+          </svg>
         </button>
-        <dialog id="my_modal_2" className="modal pb-20 mb-20">
+        <dialog id="my_modal_2" className="modal">
           <form
             method="dialog"
-            className="modal-box"
+            className="modal-box surface rounded-2xl"
             onSubmit={formik.handleSubmit}
           >
-            <h3 className="font-bold text-lg pb-3 tertiary">Say something!</h3>
+            <h3 className="font-bold text-lg pb-3">Say something!</h3>
             <textarea
               name="message"
-              className="w-full p-2"
+              aria-label="Your peep"
+              className="field w-full p-3 rounded-xl text-base"
               value={formik.values.message}
               onChange={formik.handleChange}
               rows="5"
@@ -57,14 +68,18 @@ function PostPeeps({ onPosted }) {
               maxLength="280"
               placeholder="But say it here..."
             />
-            <input
-              type="submit"
-              className="btn pt-2 text-center w-full tertiary-bg
-              secondary"
-            />
-            <div className="text-right">
-              <small>Press esc or click outside to close</small>
+            <div className="flex items-center justify-between pt-2">
+              <small className="opacity-60">Esc or tap outside to close</small>
+              <small className="opacity-60 tabular-nums">
+                {formik.values.message.length}/280
+              </small>
             </div>
+            <button
+              type="submit"
+              className="w-full mt-3 py-2.5 rounded-full accent-bg text-white font-semibold transition-opacity hover:opacity-90"
+            >
+              Peep
+            </button>
           </form>
           <form method="dialog" className="modal-backdrop">
             <button>close</button>
