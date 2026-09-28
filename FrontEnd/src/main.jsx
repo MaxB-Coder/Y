@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
-import App from "./App.jsx";
+// Tailwind first, so the app's own colour classes (App.css) win over its resets
 import "./index.css";
+import App from "./App.jsx";
 import { AuthProvider } from "./context/AuthProvider.jsx";
 
 async function start() {

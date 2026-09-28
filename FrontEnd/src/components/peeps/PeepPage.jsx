@@ -29,7 +29,8 @@ export const PeepPage = ({ peepData, onPosted }) => {
   return (
     <>
       <HeaderPeeps />
-      <div className="pt-4">{populatePeeps()}</div>
+      {/* Room at the end, so the post button never covers the last peep */}
+      <div className="pt-4 pb-20">{populatePeeps()}</div>
       {auth?.username ? <PostPeeps onPosted={onPosted} /> : null}
     </>
   );
