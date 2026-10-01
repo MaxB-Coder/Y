@@ -1,13 +1,12 @@
-import chai from "chai";
-import { expect } from "chai";
-import chaiHttp from "chai-http";
+import { expect, use } from "chai";
+import chaiHttp, { request } from "chai-http";
 
 import User from "../src/models/user.model.js";
 import server from "../index.js";
 
-chai.use(chaiHttp);
+use(chaiHttp);
 
-const testServer = chai.request(server).keepOpen();
+const testServer = request.execute(server).keepOpen();
 
 describe("GET request tests", () => {
   it("it should return the peeps", async () => {

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate, Link } from "react-router-dom";
@@ -140,7 +140,7 @@ function Login() {
                 value="Log in"
               />
               <p className="text-sm text-soft">
-                Don't have an account?{" "}
+                Don&apos;t have an account?{" "}
                 <Link
                   to="/sign-up"
                   className="font-semibold accent hover:underline"
