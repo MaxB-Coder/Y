@@ -10,7 +10,8 @@ import { getPeeps } from "./asyncFunctions/peepAPICalls.js";
 
 function App() {
   const [peepData, setPeepData] = useState([]);
-  const [error, setError] = useState({
+  // Kept for an error message the timeline doesn't show yet
+  const [, setError] = useState({
     type: ``,
     message: ``,
   });
