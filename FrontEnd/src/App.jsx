@@ -16,22 +16,27 @@ function App() {
     message: ``,
   });
 
-  const fetchData = async () => {
-    const externalDataCallResult = await getPeeps();
-    if (externalDataCallResult?.error) {
-      const errorObject = { ...externalDataCallResult };
-      errorObject.message = `There was a problem getting the peeps: $externalDataCallResult.error.message`;
-      setError(errorObject);
+  /** Puts a timeline response from the API on the page. */
+  const showPeeps = (result) => {
+    if (result?.error) {
+      setError({
+        ...result,
+        message: `There was a problem getting the peeps: ${result.error.message}`,
+      });
     }
-    const peepData = externalDataCallResult?.peeps
-      ? externalDataCallResult.peeps
-      : [];
-
-    setPeepData(peepData);
+    setPeepData(result?.peeps ?? []);
   };
 
+  // Also runs after posting, so the new peep appears without a reload
+  const fetchData = () => getPeeps().then(showPeeps);
+
   useEffect(() => {
-    fetchData();
+    let current = true;
+    // The page may have gone by the time the peeps arrive
+    getPeeps().then((result) => current && showPeeps(result));
+    return () => {
+      current = false;
+    };
   }, []);
 
   return (
